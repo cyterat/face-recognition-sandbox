@@ -1,0 +1,5 @@
+INSTALL THE WHEEL TO BE ABLE TO INSTALL dlib for python 3.10
+
+Then run: python -m pip install .\lib\dlib-19.22.99-cp310-cp310-win_amd64.whl
+
+Other versions are here: https://github.com/z-mahmud22/Dlib_Windows_Python3.x
