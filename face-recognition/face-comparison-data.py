@@ -124,5 +124,4 @@ def main(image_dir: str, tlr: float=0.6, json_out: bool=False) -> Optional[str]:
 
 
 if __name__ == "__main__":
-
     main(image_dir="images", tlr=0.6, json_out=True)
