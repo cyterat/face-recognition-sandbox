@@ -81,7 +81,7 @@ def main(image_dir: str, tlr: float=0.6, json_out: bool=False) -> Optional[str]:
     """
 
     # Print a message indicating that all images will be compared to the first image in the directory
-    print("\n" + Back.CYAN + Fore.BLACK + f"All images in '{image_dir}' are going to bo compared to the first image." + Style.RESET_ALL)
+    print("\n" + Back.CYAN + Fore.BLACK + f"All images in '{image_dir}' are going to be compared to the first image." + Style.RESET_ALL)
     
     # Ask the user if they are ready to continue
     ready = input(Back.CYAN + Fore.BLACK + "Are you ready to continue? (press 'enter' to continue or type 'n' to exit):" + Style.RESET_ALL + " ")
