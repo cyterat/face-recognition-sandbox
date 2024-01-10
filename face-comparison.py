@@ -13,9 +13,6 @@ def compare_faces(folder: str, img_1: str, img_2: str, tlr: float) -> None:
 	    print(Back.MAGENTA + Fore.BLACK + f"Input directory '{folder}' does not exist." + Style.RESET_ALL)
 	    sys.exit()
 
-	# img_2 = "false0.jpg" # TEST: similar face but different person in real life; should return False
-	# img_2 = "error0.jpg" # TEST: similar face but different person in real life; should return Error
-
 	print(Back.CYAN + Fore.BLACK + f"Comparing the face in image '{img_1}' and the face in image '{img_2}'..."+ Style.RESET_ALL)
 
 	base_image = face_recognition.load_image_file(path.join(folder, img_1))
@@ -45,9 +42,11 @@ def compare_faces(folder: str, img_1: str, img_2: str, tlr: float) -> None:
 
 
 def main():
-	folder = "medvedchuk"
+	folder = "images"
 	img_1 = "2.jpg"
-	img_2 = "3.jpg"
+	# img_2 = "3.jpg"
+	img_2 = "false0.jpg" # TEST: similar face but different person in real life; should return False
+	# img_2 = "error0.jpg" # TEST: the face is not visible; should return Error
 	tlr = 0.6 
 
 	compare_faces(folder, img_1, img_2, tlr)
