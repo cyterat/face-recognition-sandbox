@@ -31,8 +31,8 @@ def compare_images(img_1: str, img_2: str, tlr: float) -> Optional[str]:
 
     try:
         # Get the face encodings for the images
-        biden_encoding = face_recognition.face_encodings(base_image)[0]
-        unknown_encoding = face_recognition.face_encodings(candidate_image)[0]
+        base_encoding = face_recognition.face_encodings(base_image)[0]
+        candidate_encoding = face_recognition.face_encodings(candidate_image)[0]
     except IndexError as e:
         # If a face cannot be found in the image, print a message and set status to an empty string
         print(Back.MAGENTA + Fore.BLACK + "The face is unidentifiable. Consider using image of a higher quality and ensure the face is visible." + Style.RESET_ALL)
@@ -41,8 +41,8 @@ def compare_images(img_1: str, img_2: str, tlr: float) -> Optional[str]:
     try:
         # Compare the faces in the images
         results = face_recognition.compare_faces(
-            [biden_encoding], 
-            unknown_encoding, 
+            [base_encoding], 
+            candidate_encoding, 
             tolerance=tlr # Adjust the max euclidean distance between the face vectors (lower = more strict) 0.6 by default
             )[0]
     except UnboundLocalError as e:
