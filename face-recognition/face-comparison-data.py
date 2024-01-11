@@ -13,7 +13,7 @@ from colorama import init
 init(autoreset=True)
 
 
-def compare_images(img_1: str, img_2: str, tlr: float) -> Optional[str]:
+def compare_images(img_1: str, img_2: str, tlr: float) -> dict:
     """
     This function compares two images to determine if they contain the same face.
 
@@ -71,7 +71,7 @@ def compare_images(img_1: str, img_2: str, tlr: float) -> Optional[str]:
     return {"img1":img_1,"img2":img_2,"same":status}
 
 
-def compare_image_combos(image_dir: str, tlr: float=0.6, json_out: bool=False) -> Optional[str]:
+def compare_image_combos(image_dir: str, tlr: float=0.6, json_out: bool=False) -> None:
     """
     This function compares all pairs of images in a specified directory.
 
