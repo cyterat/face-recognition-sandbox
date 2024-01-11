@@ -79,10 +79,10 @@ def apply_weird_makeup_to_image(image_name, eye_size=5):
         d.line(face_landmarks['right_eyebrow'], fill=(0, 255, 255, 150), width=4)
 
         # Lips
-        d.polygon(face_landmarks['top_lip'], fill=(252, 142, 172, 220)) # outline
-        d.line(face_landmarks['top_lip'], fill=(255,0,0, 250), width=1) # fill
-        d.polygon(face_landmarks['bottom_lip'], fill=(252, 142, 172, 220)) # outline
-        d.line(face_landmarks['bottom_lip'], fill=(255,0,0, 250), width=1) # fill
+        d.polygon(face_landmarks['top_lip'], fill=(252, 142, 172, 220)) # fill
+        d.line(face_landmarks['top_lip'], fill=(255,0,0, 250), width=1) # outline
+        d.polygon(face_landmarks['bottom_lip'], fill=(252, 142, 172, 220)) # fill
+        d.line(face_landmarks['bottom_lip'], fill=(255,0,0, 250), width=1) # outline
 
         # Nose
         d.polygon(face_landmarks['nose_tip'], fill=(81, 181, 63), outline=(0, 127, 0))
